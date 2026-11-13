@@ -1,56 +1,111 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142d50"><link rel="manifest" href="manifest.webmanifest"><title>ŞUBE DANIŞMANIM</title><style>:root{font-family:system-ui,-apple-system,sans-serif;color:#15283e;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}header{background:#142d50;color:white;padding:20px}header>div,main{max-width:920px;margin:auto}h1{font-size:23px;margin:0}small,.muted{color:#738198}header small{color:#cbd7e8}.creator-credit{font-size:13px;color:#e4ebf7;margin:5px 0 7px;font-weight:500}nav{display:flex;gap:7px;overflow:auto;margin:16px 0}button,input,select{font:inherit;border-radius:9px;padding:11px;border:1px solid #cbd5e1}button{background:#17487c;color:white;cursor:pointer}button.secondary{background:white;color:#17487c}button.danger{background:#ad3543}button:disabled{opacity:.5;cursor:not-allowed}nav button.active{background:#0d2949}main{padding:0 14px 40px}.panel{background:white;border:1px solid #e4e9f1;border-radius:15px;padding:20px;margin:14px 0;box-shadow:0 2px 9px #12243b08}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.stack{display:grid;gap:12px}.field{display:grid;gap:5px}.field label{font-size:13px;color:#516174}.pill{display:inline-block;background:#e2f6ed;color:#116e47;padding:5px 10px;border-radius:20px;font-size:13px}.card{border:1px solid #dfe7f0;border-radius:12px;padding:16px;background:#fff}.card button{margin-top:10px}.big{font-size:26px;font-weight:750;color:#c62828}.next-rep{color:#c62828;font-weight:800}.total-row{font-weight:800;border-top:2px solid #243c5a}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:11px;border-bottom:1px solid #e7edf4}th{color:#53657b} .scroll{overflow:auto}.hidden{display:none}.warn{background:#fff6e5;border:1px solid #f2d39b;padding:12px;border-radius:10px;font-size:13px}h2{font-size:19px;margin:0 0 14px}h3{margin:0 0 8px}input{width:100%;min-width:0} .stat{font-size:30px;font-weight:700} @media(max-width:540px){.panel{padding:15px}table{font-size:12px}th,td{padding:7px}}
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#a83e48"><link rel="manifest" href="manifest.webmanifest"><title>ŞUBE DANIŞMANIM</title><style>:root{font-family:system-ui,-apple-system,sans-serif;color:#30343c;background:#f8f6f6}*{box-sizing:border-box}body{margin:0}header{background:#a83e48;color:white;padding:20px}header>div,main{max-width:920px;margin:auto}h1{font-size:23px;margin:0}small,.muted{color:#85777b}header small{color:#f8e6e8}.creator-credit{font-size:13px;color:#fbecef;margin:5px 0 7px;font-weight:500}nav{display:flex;gap:7px;overflow:auto;margin:16px 0}button,input,select{font:inherit;border-radius:9px;padding:11px;border:1px solid #cbd5e1}button{background:#a83e48;color:white;cursor:pointer}button.secondary{background:white;color:#a83e48}button.danger{background:#ad3543}button:disabled{opacity:.5;cursor:not-allowed}nav button.active{background:#91313c}main{padding:0 14px 40px}.panel{background:white;border:1px solid #ede5e6;border-radius:15px;padding:20px;margin:14px 0;box-shadow:0 2px 9px #5b172008}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.stack{display:grid;gap:12px}.field{display:grid;gap:5px}.field label{font-size:13px;color:#746c70}.pill{display:inline-block;background:#e2f6ed;color:#116e47;padding:5px 10px;border-radius:20px;font-size:13px}.card{border:1px solid #ece4e5;border-radius:12px;padding:16px;background:#fff}.card button{margin-top:10px}.big{font-size:26px;font-weight:750;color:#c62828}.next-rep{color:#c62828;font-weight:800}.total-row{font-weight:800;border-top:2px solid #ac626b}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:11px;border-bottom:1px solid #f0e9ea}th{color:#746c70} .scroll{overflow:auto}.hidden{display:none}.warn{background:#fff6e5;border:1px solid #f2d39b;padding:12px;border-radius:10px;font-size:13px}h2{font-size:19px;margin:0 0 14px}h3{margin:0 0 8px}input{width:100%;min-width:0} .stat{font-size:30px;font-weight:700} @media(max-width:540px){.panel{padding:15px}table{font-size:12px}th,td{padding:7px}}
 .app-modal{position:fixed;inset:0;z-index:70;background:rgba(7,23,43,.67);display:none;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(3px)}
 .app-modal.open{display:flex}
-.app-modal-card{width:min(100%,440px);background:#fff;border-radius:22px;padding:26px 22px;box-shadow:0 20px 65px #07172b55;text-align:center}
+.app-modal-card{width:min(100%,440px);background:#fff;border-radius:22px;padding:26px 22px;box-shadow:0 20px 65px #40121938;text-align:center}
 .app-modal-symbol{width:58px;height:58px;margin:0 auto 14px;display:grid;place-items:center;border-radius:18px;background:#e8f5ee;color:#16734c;font-size:28px}
 .app-modal-symbol.warning{background:#fff1e8;color:#a44c19}
 .app-modal-card h2{font-size:22px;line-height:1.25;margin:0 0 10px}
-.app-modal-card p{color:#52637a;line-height:1.55;margin:0 0 22px}
+.app-modal-card p{color:#746c70;line-height:1.55;margin:0 0 22px}
 .app-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .app-modal-actions.single{grid-template-columns:1fr}
 .app-modal-actions button{min-height:49px;font-weight:650;border-radius:12px}
 .app-modal-actions .confirm-danger{background:#b33643;color:white;border-color:#b33643}
-.pending-credit-box{margin-top:14px;padding:14px 16px;border:2px solid #243a56;border-radius:13px;background:#e9eef5;color:#14253c;font-weight:750}
-.pending-credit-title{font-size:16px;font-weight:850;color:#12253d;margin-bottom:8px}
-.pending-credit-list{margin:0;padding-left:26px;color:#10233c;font-weight:800}
+.pending-credit-box{margin-top:14px;padding:14px 16px;border:2px solid #d5a2a8;border-radius:13px;background:#fcf1f2;color:#40343a;font-weight:750}
+.pending-credit-title{font-size:16px;font-weight:850;color:#8d3944;margin-bottom:8px}
+.pending-credit-list{margin:0;padding-left:26px;color:#40343a;font-weight:800}
 .pending-credit-list li{padding:5px 0;font-size:16px}
-.pending-credit-list li::marker{font-weight:900;color:#12253d}
-.pending-credit-note{font-size:12px;font-weight:600;color:#344b65;margin-top:8px}
-.pending-credit-empty{font-weight:750;color:#253a53}
+.pending-credit-list li::marker{font-weight:900;color:#8d3944}
+.pending-credit-note{font-size:12px;font-weight:600;color:#6c565a;margin-top:8px}
+.pending-credit-empty{font-weight:750;color:#62555a}
 
-.perf-card{border:1px solid #d9e2ed;border-radius:15px;padding:18px;background:#fff;box-shadow:0 2px 9px #12243b08}
-.perf-card h3{font-size:19px;color:#142d50;margin:0}.perf-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.perf-card-head button{min-width:120px;font-weight:750}.perf-card-body{margin-top:16px}.perf-card-body[hidden]{display:none}
+.perf-card{border:1px solid #ece4e5;border-radius:15px;padding:18px;background:#fff;box-shadow:0 2px 9px #5b172008}
+.perf-card h3{font-size:19px;color:#a83e48;margin:0}.perf-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.perf-card-head button{min-width:120px;font-weight:750}.perf-card-body{margin-top:16px}.perf-card-body[hidden]{display:none}
 .perf-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px}
-.perf-field{display:flex;flex-direction:column;gap:7px;padding:12px;background:#f3f6fb;border:1px solid #dfe7f0;border-radius:12px}
-.perf-field label{font-size:13px;font-weight:750;color:#263c55}
-.perf-field input{background:white;font-size:16px;font-weight:650;color:#142d50}
-.perf-field input:focus{outline:2px solid #2a619a;outline-offset:1px}
-.perf-money{position:relative}.perf-money input{padding-right:38px}.perf-money::after{content:"₺";position:absolute;right:13px;bottom:13px;color:#50627b;font-weight:800}
+.perf-field{display:flex;flex-direction:column;gap:7px;padding:12px;background:#f8f6f6;border:1px solid #ece4e5;border-radius:12px}
+.perf-field label{font-size:13px;font-weight:750;color:#4f4145}
+.perf-field input{background:white;font-size:16px;font-weight:650;color:#a83e48}
+.perf-field input:focus{outline:2px solid #b95762;outline-offset:1px}
+.perf-money{position:relative}.perf-money input{padding-right:38px}.perf-money::after{content:"₺";position:absolute;right:13px;bottom:13px;color:#746c70;font-weight:800}
 @media(max-width:540px){.perf-fields{grid-template-columns:1fr}.perf-card{padding:14px}nav button{flex-shrink:0}}
 
-.collection-rep,.collection-customer{border:1px solid #dce3ed;background:#fff;border-radius:14px;padding:15px;margin-bottom:12px}
+.collection-rep,.collection-customer{border:1px solid #ece4e5;background:#fff;border-radius:14px;padding:15px;margin-bottom:12px}
 .collection-rep-head,.collection-customer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.collection-rep-head h3,.collection-customer-head h4{margin:0;color:#193450}
+.collection-rep-head h3,.collection-customer-head h4{margin:0;color:#743640}
 .collection-rep-body,.collection-customer-body{margin-top:14px}
 .collection-rep-body[hidden],.collection-customer-body[hidden]{display:none}
-.collection-customer{background:#f7f9fc}
+.collection-customer{background:#fcfafb}
 .collection-badge{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:850;white-space:nowrap}
 .collection-badge.full{color:#08663e;background:#d6f5e4}
 .collection-badge.partial{color:#965000;background:#fff0d1}
 .collection-badge.none{color:#55657a;background:#e9edf2}
 .collection-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
 .collection-field{display:flex;flex-direction:column;gap:6px}
-.collection-field label{font-size:13px;font-weight:750;color:#263c55}
+.collection-field label{font-size:13px;font-weight:750;color:#4f4145}
 .collection-field input,.collection-field select{width:100%;box-sizing:border-box}
-.collection-money{position:relative}.collection-money input{padding-right:36px}.collection-money:after{content:'₺';position:absolute;right:13px;bottom:12px;font-weight:800;color:#536782}
+.collection-money{position:relative}.collection-money input{padding-right:36px}.collection-money:after{content:'₺';position:absolute;right:13px;bottom:12px;font-weight:800;color:#746c70}
 .collection-form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.collection-status-info{font-size:13px;font-weight:650;color:#324b65;margin-top:10px}
+.collection-status-info{font-size:13px;font-weight:650;color:#6c565a;margin-top:10px}
 @media(max-width:560px){.collection-fields{grid-template-columns:1fr}}
 .collection-rep-head{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:10px}
 .collection-rep-title{flex:1;min-width:0;overflow-wrap:anywhere}
 .collection-rep-toggle{flex-shrink:0;white-space:nowrap;max-width:45%;padding:10px 12px}
 @media(max-width:380px){.collection-rep-toggle{font-size:13px;padding:9px 10px}}
-</style></head><body><header><div><h1>ŞUBE DANIŞMANIM</h1><div class="creator-credit">created by İlhancan Aydoğan</div><small>Müşteri yönlendirme ve aylık kayıt sistemi · v4.6</small></div></header><main><nav><button data-tab="desk" class="active">Danışma</button><button data-tab="reps" class="secondary">Portföy Yöneticileri</button><button data-tab="report" class="secondary">Aylık rapor</button><button data-tab="performance" class="secondary">PERFORMANS RAPOR</button><button data-tab="collections" class="secondary">TAHSİLAT</button></nav><div class="warn">Kişisel veriler yalnızca bu tarayıcıda saklanır. Paylaşılan cihazlarda erişimi sınırlandırın; tarayıcı verileri silinirse kayıtlar kaybolabilir. GitHub'a gerçek müşteri verisi yüklemeyin.</div><section id="desk"><div class="panel"><h2>Sıradaki portföy yöneticisi</h2><div id="next" class="big">—</div><div id="queueInfo" class="muted" style="margin-top:10px"></div><div id="creditInfo" class="pending-credit-box" aria-live="polite"></div><p class="muted">Sabit sıra ve telafi hakları ayrı takip edilir. Yalnızca müsait portföy yöneticileri müşteri alır.</p></div><div class="panel"><h2>Yeni müşteri kaydı</h2><form id="customerForm" class="stack"><div class="grid"><div class="field"><label for="first">Ad</label><input id="first" required maxlength="80" autocomplete="off"></div><div class="field"><label for="last">Soyad</label><input id="last" required maxlength="80" autocomplete="off"></div><div class="field"><label for="phone">Telefon numarası</label><input id="phone" required type="tel" inputmode="tel" maxlength="20" placeholder="05XX XXX XX XX" autocomplete="off"></div></div><button id="assign" type="submit">Müşteriyi sıradaki portföy yöneticisine yönlendir</button></form><div class="row" style="margin-top:12px"><button type="button" class="secondary" id="skipBtn">Sıradaki portföy yöneticisi müsait değil</button><button type="button" class="secondary" id="editLastBtn">Son yönlendirmeyi düzenle</button></div><p id="assignmentPreview" class="muted" aria-live="polite"></p><div id="skippedPreview" class="muted"></div><button type="button" id="cancelSkips" class="secondary hidden">Bu müşteri için atlamaları iptal et</button></div><div class="panel"><div class="row"><h2>Son yönlendirmeler</h2><button type="button" id="undoLast" class="secondary">↶ Son aktiviteyi geri al</button></div><div id="recent" class="scroll"></div></div></section><section id="reps" class="hidden"><div class="panel"><h2>Portföy yöneticisi yönetimi</h2><form id="repForm" class="row"><input id="repName" style="flex:1" required maxlength="90" placeholder="Portföy yöneticisi adı soyadı"><button>Ekle</button></form></div><div id="repCards" class="grid"></div></section><section id="performance" class="hidden"><div class="panel"><h2>PERFORMANS RAPOR</h2><p class="muted">Her portföy yöneticisinin performans bilgilerini aşağıdaki kartları açarak düzenleyebilirsiniz. Girilen bilgiler bu cihazda otomatik kaydedilir.</p></div><div id="performanceCards" class="stack"></div><div class="panel"><button id="generatePerformanceReport" type="button" style="width:100%;font-weight:800;font-size:17px;padding:15px">Rapor Oluştur</button><p class="muted" style="margin:10px 0 0">Tüm portföy yöneticilerini ve en altta toplamları içeren JPEG tablo hazırlanır. Telefonunuz destekliyorsa doğrudan paylaşabilirsiniz.</p></div></section><section id="collections" class="hidden"><div class="panel"><h2>TAHSİLAT</h2><p class="muted">Bu bölüm bağımsızdır. Önce portföy yöneticilerini buraya ekleyin; ardından müşteri tahsilat kayıtlarını oluşturun. Bilgiler bu cihazda saklanır.</p></div><div class="panel"><h3>Portföy Yöneticisi Ekle</h3><form id="collectionManagerForm" class="row"><input id="collectionManagerName" required maxlength="90" autocomplete="off" placeholder="Ad Soyad" style="flex:1;min-width:170px"><button type="submit">Yönetici Ekle</button></form><p class="muted">Bu liste yalnızca TAHSİLAT bölümüne aittir; danışma sırasını ve performans raporunu etkilemez.</p></div><div id="collectionRepCards" class="stack"></div></section><section id="report" class="hidden"><div class="panel"><div class="row"><h2>Aylık rapor</h2><input type="month" id="month" style="max-width:200px"></div><div id="summary"></div><div class="row" style="margin-top:16px"><button id="export">Aylık CSV raporu indir</button><button id="print" class="secondary">JPEG raporu indir / paylaş</button></div></div></section><div class="panel" style="border-color:#efc4c4"><h2>Test işlemleri</h2><p class="muted">Tüm portföy yöneticileri, müşteri kayıtları, sıra hakları ve müsait olmama geçmişi bu cihazdan kalıcı olarak silinir.</p><button id="resetAll" type="button" class="danger">Tüm sistemi sıfırla</button></div><div id="creditDialog" class="hidden" role="dialog" aria-modal="true" aria-labelledby="creditTitle" style="position:fixed;inset:0;background:#07172bbb;z-index:30;display:none;align-items:center;justify-content:center;padding:16px"><div class="panel" style="width:min(100%,480px);max-height:90vh;overflow:auto"><h2 id="creditTitle">Bekleyen telafi hakkı</h2><p id="creditQuestion" style="font-size:17px"></p><p class="muted">Müsaitse müşteri bu portföy yöneticisine atanır. Müsait değilse hakkı korunur ve sıradaki telafi hakkı kontrol edilir.</p><div class="stack"><button id="creditYes" type="button" style="background:#17734c">Müsait — Müşteriyi ata</button><button id="creditNo" type="button" class="secondary">Müsait değil — Sıradakine geç</button><button id="creditCancel" type="button" class="secondary">İşlemi iptal et</button></div></div></div><div id="reasonDialog" class="hidden" role="dialog" aria-modal="true" aria-labelledby="reasonTitle" style="position:fixed;inset:0;background:#07172bbb;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px"><div class="panel" style="width:min(100%,460px);max-height:90vh;overflow:auto"><h2 id="reasonTitle">Müsait olmama sebebi</h2><p id="reasonInfo"></p><label for="reasonSelect">Sebep seçin</label><select id="reasonSelect" style="display:block;width:100%;padding:12px;margin:10px 0 20px"><option value="">Sebep seçin</option><option>Sahada</option><option>İzinli</option><option>Raporlu</option><option>Görüşmede</option></select><div class="row"><button id="confirmReason" type="button">Onayla</button><button id="cancelReason" type="button" class="secondary">Vazgeç</button></div></div></div><div id="actionModal" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="actionModalTitle" aria-describedby="actionModalText">
+
+/* v4.7 — soft ruby visual system */
+:root{--brand:#a83e48;--brand-dark:#91313c;--brand-light:#fcf0f1;--ink:#30343c;--line:#ece3e5;--shadow:0 6px 24px rgba(71,32,39,.055)}
+body{background:#f8f6f6;color:var(--ink);-webkit-font-smoothing:antialiased}
+header{background:linear-gradient(130deg,#9b3743 0%,#b6535d 100%);padding:24px 20px 23px;box-shadow:0 5px 20px rgba(117,36,49,.13)}
+header h1{font-size:clamp(23px,5vw,29px);font-weight:800;letter-spacing:-.65px}
+header small{font-size:12px;letter-spacing:.3px;color:#ffe5e8}
+.creator-credit{font-size:12px;color:#fff3f4;opacity:.93}
+main{padding:0 15px 30px}
+nav{gap:9px;padding:4px 0 8px;margin:18px 0 16px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{border:1px solid #e9dfe1;background:white;color:#70585d;border-radius:13px;white-space:nowrap;font-weight:650;box-shadow:0 2px 5px rgba(70,25,32,.025);padding:12px 15px;transition:background .18s,transform .18s}
+nav button.active{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 5px 14px rgba(168,62,72,.18)}
+nav button:active,button:active{transform:scale(.985)}
+button{border-radius:12px;background:var(--brand);border:1px solid var(--brand);color:white;font-weight:650;padding:12px 16px;transition:background .18s,box-shadow .18s,transform .18s}
+button:hover:not(:disabled){box-shadow:0 4px 14px rgba(168,62,72,.13)}
+button.secondary{background:#fff;color:#8c3b46;border:1px solid #e6cfd2}
+button.danger{background:#ad4852;border-color:#ad4852}
+input,select{border:1px solid #e2dadd;border-radius:12px;background:#fff;color:var(--ink);padding:12px 13px;min-height:46px}
+input:focus,select:focus{outline:2px solid rgba(168,62,72,.25);border-color:#b75e67;outline-offset:0}
+.panel,.card,.perf-card,.collection-rep{border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);background:#fff}
+.panel{padding:22px;margin:13px 0 17px}
+h2{font-size:19px;letter-spacing:-.35px;font-weight:750}
+h3{letter-spacing:-.2px}
+.field label,.collection-field label{font-weight:650;color:#6e6165}
+.big{font-size:clamp(29px,6vw,38px);color:var(--brand);letter-spacing:-.65px}
+.next-rep{color:var(--brand)}
+.pending-credit-box{border:1px solid #e8d6d8;border-radius:15px;background:#fcf7f8;color:#503d42;padding:15px 17px}
+.pending-credit-title{color:#8d3944}
+.pending-credit-list,.pending-credit-list li::marker{color:#503d42}
+.pending-credit-empty{color:#66595c}
+.perf-card{padding:18px}
+.perf-card h3{color:#603b43}
+.perf-card-head{flex-wrap:nowrap}
+.perf-card-head button{flex-shrink:0;min-width:0}
+.perf-field{background:#fcfafb;border-color:#efe7e8;border-radius:14px}
+.perf-field input{color:#43373a}
+.collection-rep,.collection-customer{border-radius:16px}
+.collection-customer{background:#fcfafb;border-color:#eee5e7}
+.collection-rep-head h3,.collection-customer-head h4{color:#603b43}
+.collection-rep-toggle{border-radius:11px}
+table{border-collapse:separate;border-spacing:0}
+th{color:#76686b;font-weight:700}
+th,td{border-bottom:1px solid #f0e8e9}
+tr:last-child td{border-bottom:0}
+.total-row{border-top:2px solid #ba8189}
+.app-modal{background:rgba(41,20,25,.55);backdrop-filter:blur(5px)}
+.app-modal-card{border-radius:23px;box-shadow:0 22px 65px rgba(45,17,23,.25)}
+.app-modal-symbol{background:#f9eded;color:var(--brand)}
+.app-modal-actions button{border-radius:13px}
+#creditDialog,#reasonDialog{backdrop-filter:blur(5px)}
+#creditDialog>.panel,#reasonDialog>.panel{border-radius:22px;box-shadow:0 22px 65px rgba(45,17,23,.22)}
+.reset-footer{display:flex;justify-content:center;padding:22px 0 10px;margin-top:16px}
+.reset-button{background:#ad4852;border-color:#ad4852;border-radius:13px;padding:11px 28px;min-width:116px;font-size:14px;box-shadow:none}
+@media(max-width:540px){.panel{padding:18px}.perf-card{padding:15px}nav button{font-size:14px;padding:11px 14px}.row button{max-width:100%}}
+</style></head><body><header><div><h1>ŞUBE DANIŞMANIM</h1><div class="creator-credit">created by İlhancan Aydoğan</div><small>v4.7</small></div></header><main><nav><button data-tab="desk" class="active">Danışma</button><button data-tab="reps" class="secondary">Portföy Yöneticileri</button><button data-tab="report" class="secondary">Aylık rapor</button><button data-tab="performance" class="secondary">PERFORMANS RAPOR</button><button data-tab="collections" class="secondary">TAHSİLAT</button></nav><section id="desk"><div class="panel"><h2>Sıradaki portföy yöneticisi</h2><div id="next" class="big">—</div><div id="queueInfo" class="muted" style="margin-top:10px"></div><div id="creditInfo" class="pending-credit-box" aria-live="polite"></div></div><div class="panel"><h2>Yeni müşteri kaydı</h2><form id="customerForm" class="stack"><div class="grid"><div class="field"><label for="first">Ad</label><input id="first" required maxlength="80" autocomplete="off"></div><div class="field"><label for="last">Soyad</label><input id="last" required maxlength="80" autocomplete="off"></div><div class="field"><label for="phone">Telefon numarası</label><input id="phone" required type="tel" inputmode="tel" maxlength="20" placeholder="05XX XXX XX XX" autocomplete="off"></div></div><button id="assign" type="submit">Müşteriyi sıradaki portföy yöneticisine yönlendir</button></form><div class="row" style="margin-top:12px"><button type="button" class="secondary" id="skipBtn">Sıradaki portföy yöneticisi müsait değil</button><button type="button" class="secondary" id="editLastBtn">Son yönlendirmeyi düzenle</button></div><p id="assignmentPreview" class="muted" aria-live="polite"></p><div id="skippedPreview" class="muted"></div><button type="button" id="cancelSkips" class="secondary hidden">Bu müşteri için atlamaları iptal et</button></div><div class="panel"><div class="row"><h2>Son yönlendirmeler</h2><button type="button" id="undoLast" class="secondary">↶ Son aktiviteyi geri al</button></div><div id="recent" class="scroll"></div></div></section><section id="reps" class="hidden"><div class="panel"><h2>Portföy yöneticisi yönetimi</h2><form id="repForm" class="row"><input id="repName" style="flex:1" required maxlength="90" placeholder="Portföy yöneticisi adı soyadı"><button>Ekle</button></form></div><div id="repCards" class="grid"></div></section><section id="performance" class="hidden"><div class="panel"><h2>PERFORMANS RAPOR</h2></div><div id="performanceCards" class="stack"></div><div class="panel"><button id="generatePerformanceReport" type="button" style="width:100%;font-weight:800;font-size:17px;padding:15px">Rapor Oluştur</button></div></section><section id="collections" class="hidden"><div class="panel"><h2>TAHSİLAT</h2></div><div class="panel"><h3>Portföy Yöneticisi Ekle</h3><form id="collectionManagerForm" class="row"><input id="collectionManagerName" required maxlength="90" autocomplete="off" placeholder="Ad Soyad" style="flex:1;min-width:170px"><button type="submit">Yönetici Ekle</button></form></div><div id="collectionRepCards" class="stack"></div></section><section id="report" class="hidden"><div class="panel"><div class="row"><h2>Aylık rapor</h2><input type="month" id="month" style="max-width:200px"></div><div id="summary"></div><div class="row" style="margin-top:16px"><button id="export">Aylık CSV raporu indir</button><button id="print" class="secondary">JPEG raporu indir / paylaş</button></div></div></section><div class="reset-footer"><button id="resetAll" type="button" class="danger reset-button">Sıfırla</button></div><div id="creditDialog" class="hidden" role="dialog" aria-modal="true" aria-labelledby="creditTitle" style="position:fixed;inset:0;background:#32121bbb;z-index:30;display:none;align-items:center;justify-content:center;padding:16px"><div class="panel" style="width:min(100%,480px);max-height:90vh;overflow:auto"><h2 id="creditTitle">Bekleyen telafi hakkı</h2><p id="creditQuestion" style="font-size:17px"></p><div class="stack"><button id="creditYes" type="button" style="background:#17734c">Müsait — Müşteriyi ata</button><button id="creditNo" type="button" class="secondary">Müsait değil — Sıradakine geç</button><button id="creditCancel" type="button" class="secondary">İşlemi iptal et</button></div></div></div><div id="reasonDialog" class="hidden" role="dialog" aria-modal="true" aria-labelledby="reasonTitle" style="position:fixed;inset:0;background:#32121bbb;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px"><div class="panel" style="width:min(100%,460px);max-height:90vh;overflow:auto"><h2 id="reasonTitle">Müsait olmama sebebi</h2><p id="reasonInfo"></p><label for="reasonSelect">Sebep seçin</label><select id="reasonSelect" style="display:block;width:100%;padding:12px;margin:10px 0 20px"><option value="">Sebep seçin</option><option>Sahada</option><option>İzinli</option><option>Raporlu</option><option>Görüşmede</option></select><div class="row"><button id="confirmReason" type="button">Onayla</button><button id="cancelReason" type="button" class="secondary">Vazgeç</button></div></div></div><div id="actionModal" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="actionModalTitle" aria-describedby="actionModalText">
 <div class="app-modal-card">
 <div id="actionModalSymbol" class="app-modal-symbol">✓</div>
 <h2 id="actionModalTitle">İşlem tamamlandı</h2>
@@ -390,7 +445,7 @@ function detail(){
  let target=document.querySelector('[data-detail="'+CSS.escape(r.id)+'"]');if(!target)return;
  let list=data.records.filter(x=>x.repId===r.id).sort((a,b)=>b.at.localeCompare(a.at));
  let absences=data.unavailability.filter(x=>x.repId===r.id).sort((a,b)=>b.at.localeCompare(a.at));
- target.innerHTML='<div class="panel" style="margin-top:14px;background:#f7f9fd"><div class="row"><h2>'+esc(r.name)+' — müşteri kayıtları</h2><button class="secondary" id="closeDetail">Kapat</button></div><p class="muted">'+list.length+' müşteri · '+(data.rotation.pending.includes(r.id)?'Bekleyen telafi hakkı var':'Bekleyen telafi yok')+'</p><div class="scroll">'+(list.length?'<table><thead><tr><th>Tarih / saat</th><th>Ad soyad</th><th>Telefon</th></tr></thead><tbody>'+list.map(x=>'<tr><td>'+esc(dateLocal(x.at))+'</td><td>'+esc(x.first+' '+x.last)+'</td><td>'+esc(x.phone)+'</td></tr>').join('')+'</tbody></table>':'Henüz kayıt yok.')+'</div><h3>Müsait olmama kayıtları ('+absences.length+')</h3><div class="scroll">'+(absences.length?'<table><thead><tr><th>Tarih / saat</th><th>Sebep</th><th>İşlem</th></tr></thead><tbody>'+absences.map(x=>'<tr><td>'+esc(dateLocal(x.at))+'</td><td>'+esc(x.reason)+'</td><td>'+esc(x.action==='edit'?'Son yönlendirme düzeltmesi':'Sıra atlandı')+'</td></tr>').join('')+'</tbody></table>':'Henüz kayıt yok.')+'</div></div>';
+ target.innerHTML='<div class="panel" style="margin-top:14px;background:#fcfafb"><div class="row"><h2>'+esc(r.name)+' — müşteri kayıtları</h2><button class="secondary" id="closeDetail">Kapat</button></div><p class="muted">'+list.length+' müşteri · '+(data.rotation.pending.includes(r.id)?'Bekleyen telafi hakkı var':'Bekleyen telafi yok')+'</p><div class="scroll">'+(list.length?'<table><thead><tr><th>Tarih / saat</th><th>Ad soyad</th><th>Telefon</th></tr></thead><tbody>'+list.map(x=>'<tr><td>'+esc(dateLocal(x.at))+'</td><td>'+esc(x.first+' '+x.last)+'</td><td>'+esc(x.phone)+'</td></tr>').join('')+'</tbody></table>':'Henüz kayıt yok.')+'</div><h3>Müsait olmama kayıtları ('+absences.length+')</h3><div class="scroll">'+(absences.length?'<table><thead><tr><th>Tarih / saat</th><th>Sebep</th><th>İşlem</th></tr></thead><tbody>'+absences.map(x=>'<tr><td>'+esc(dateLocal(x.at))+'</td><td>'+esc(x.reason)+'</td><td>'+esc(x.action==='edit'?'Son yönlendirme düzeltmesi':'Sıra atlandı')+'</td></tr>').join('')+'</tbody></table>':'Henüz kayıt yok.')+'</div></div>';
  $('closeDetail').onclick=()=>{selected=null;render()};
 }
 function report(){
@@ -480,10 +535,10 @@ $('month').onchange=render;$('export').onclick=()=>{let m=$('month').value,rows=
  const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;
  const ctx=canvas.getContext('2d');if(!ctx){alert('Bu cihazda JPEG oluşturulamıyor.');return}
  ctx.fillStyle='#fff';ctx.fillRect(0,0,width,height);
- ctx.fillStyle='#142d50';ctx.font='bold 32px system-ui, sans-serif';ctx.fillText('Dönem: '+month.split('-').reverse().join('/'),pad,58);
+ ctx.fillStyle='#a83e48';ctx.font='bold 32px system-ui, sans-serif';ctx.fillText('Dönem: '+month.split('-').reverse().join('/'),pad,58);
  ctx.font='23px system-ui, sans-serif';ctx.fillText('Toplam müşteri: '+rows.length,pad,100);
  const top=140;ctx.fillStyle='#e9eff7';ctx.fillRect(pad,top,width-2*pad,60);
- ctx.fillStyle='#243c5a';ctx.font='bold 23px system-ui, sans-serif';ctx.fillText('PORTFÖY YÖNETİCİSİ',pad+20,top+39);ctx.textAlign='right';ctx.fillText('MÜŞTERİ SAYISI',width-pad-20,top+39);ctx.textAlign='left';
+ ctx.fillStyle='#ac626b';ctx.font='bold 23px system-ui, sans-serif';ctx.fillText('PORTFÖY YÖNETİCİSİ',pad+20,top+39);ctx.textAlign='right';ctx.fillText('MÜŞTERİ SAYISI',width-pad-20,top+39);ctx.textAlign='left';
  const next=normalCandidate();
  reps.forEach((r,i)=>{
   const y=top+60+i*rowH;ctx.fillStyle=i%2?'#f4f7fb':'#ffffff';ctx.fillRect(pad,y,width-2*pad,rowH);
@@ -496,7 +551,7 @@ $('month').onchange=render;$('export').onclick=()=>{let m=$('month').value,rows=
   ctx.fillText(label,pad+20,y+40);ctx.textAlign='right';ctx.fillText(String(rows.filter(x=>x.repId===r.id).length),width-pad-20,y+40);ctx.textAlign='left';
  });
  const ty=top+60+reps.length*rowH;ctx.fillStyle='#e9eff7';ctx.fillRect(pad,ty,width-2*pad,rowH);
- ctx.fillStyle='#142d50';ctx.font='bold 24px system-ui, sans-serif';ctx.fillText('ŞUBE TOPLAMI',pad+20,ty+41);ctx.textAlign='right';ctx.fillText(String(rows.length),width-pad-20,ty+41);ctx.textAlign='left';
+ ctx.fillStyle='#a83e48';ctx.font='bold 24px system-ui, sans-serif';ctx.fillText('ŞUBE TOPLAMI',pad+20,ty+41);ctx.textAlign='right';ctx.fillText(String(rows.length),width-pad-20,ty+41);ctx.textAlign='left';
  ctx.fillStyle='#7b8999';ctx.font='18px system-ui, sans-serif';ctx.fillText('Oluşturulma: '+new Date().toLocaleString('tr-TR'),pad,height-35);
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',0.94));
  if(!blob){alert('JPEG oluşturulamadı.');return}
