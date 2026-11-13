@@ -438,7 +438,26 @@ function render(){refreshUndo();
  $('recent').innerHTML=data.records.length?'<table><thead><tr><th>Tarih</th><th>Müşteri</th><th>Portföy yöneticisi</th></tr></thead><tbody>'+data.records.slice(-6).reverse().map(r=>'<tr><td>'+esc(dateLocal(r.at))+'</td><td>'+esc(r.first+' '+r.last)+'</td><td>'+esc(r.repName)+'</td></tr>').join('')+'</tbody></table>':'<p class="muted">Henüz yönlendirme yok.</p>';
  $('repCards').innerHTML=orderedReps().map(r=>'<div class="card" style="grid-column:1/-1" data-card="'+esc(r.id)+'"><div class="row"><div><h3>'+esc(r.name)+'</h3><small>'+(data.rotation.pending.includes(r.id)?'TELAFİ HAKKI BEKLİYOR · ':'')+'Sabit sıra: '+(data.rotation.order.indexOf(r.id)+1)+(Number(r.joinRound||1)>data.rotation.round?' · İlk müşteri: '+r.joinRound+'. tur':'')+'</small></div></div><div class="big">'+data.records.filter(x=>x.repId===r.id&&monthLocal(x.at)===$('month').value).length+'</div><small>Seçili ayda alınan müşteri</small><br><button data-open="'+esc(r.id)+'">'+(selected===r.id?'Kartı kapat':'Kartı aç')+'</button> <button class="danger" data-delete="'+esc(r.id)+'">Sil</button><div data-detail="'+esc(r.id)+'"></div></div>').join('')||'<div class="panel">Henüz portföy yöneticisi eklenmedi.</div>';
  document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{selected=selected===b.dataset.open?null:b.dataset.open;render()});
- document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{let id=b.dataset.delete;if(!confirm('Portföy yöneticisi silinsin mi? Geçmiş müşteri kayıtları korunacak.'))return;let oldOrder=[...data.rotation.order],current=oldOrder[data.rotation.cursor];data.reps=data.reps.filter(r=>r.id!==id);data.rotation.order=data.rotation.order.filter(x=>x!==id);data.rotation.pending=data.rotation.pending.filter(x=>x!==id);data.rotation.cursor=Math.max(0,data.rotation.order.indexOf(current));draftSkips=[];if(selected===id)selected=null;save()});
+ document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{let id=b.dataset.delete;if(!confirm('Portföy yöneticisi silinsin mi? Geçmiş müşteri kayıtları korunacak.'))return;sync();
+ const oldOrder=[...data.rotation.order],oldCursor=data.rotation.cursor;
+ const current=oldOrder[oldCursor];
+ // Silinen kişi sıradaysa, eski alfabetik sıradaki bir sonraki aktif kişiyi bul.
+ // Başka biri sıradaysa o kişinin hakkını ve konumunu aynen koru.
+ let nextId=current===id?null:current;
+ if(current===id){
+  for(let step=1;step<oldOrder.length;step++){
+   const candidateId=oldOrder[(oldCursor+step)%oldOrder.length];
+   if(candidateId!==id){nextId=candidateId;break}
+  }
+ }
+ const crossedRound=current===id&&nextId!==null
+  &&oldOrder.indexOf(nextId)<=oldCursor;
+ data.reps=data.reps.filter(r=>r.id!==id);
+ data.rotation.pending=data.rotation.pending.filter(x=>x!==id);
+ sync();
+ data.rotation.cursor=nextId?data.rotation.order.indexOf(nextId):0;
+ if(crossedRound)data.rotation.round++;
+ draftSkips=[];if(selected===id)selected=null;save()});
  detail();report();renderPerformance();renderCollections()
 }
 function detail(){
